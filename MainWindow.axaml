@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:control="clr-namespace:AvaloniaImageButton.Control"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        x:Class="AvaloniaImageButton.MainWindow"
+        Title="AvaloniaImageButton" Width="400" Height="300">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid Grid.Row="0" Background="#333333">
+      <control:ImageButton Grid.Row="0" x:Name="btnImage" Margin="0" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"
+                           CurrentImage="/Image/liveview_channelinfo_show_normal.png"
+                           UnCheckedImage="/Image/liveview_channelinfo_show_normal.png"
+                           UnCheckedHoverImage="/Image/liveview_channelinfo_show_hover.png"
+                           UnCheckedPressedImage="/Image/liveview_channelinfo_show_select.png"
+                           CheckedImage="/Image/liveview_channelinfo_hide_normal.png"
+                           CheckedHoverImage="/Image/liveview_channelinfo_hide_hover.png"
+                           CheckedPressedImage="/Image/liveview_channelinfo_hide_select.png"
+                           DisabledImage="/Image/liveview_channelinfo_show_disabled.png"
+                           Click="ImageButton_Click"
+                           IsChecked="False"/>
+      </Grid>
+      <Button Grid.Row="1" x:Name="btnTest" Content="Test" VerticalAlignment="Center" HorizontalAlignment="Center"
+              Click="btnTest_Click"/>
+  </Grid>
+</Window>
