@@ -12,7 +12,7 @@
       <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <Grid Grid.Row="0" Background="#333333">
-      <control:ImageButton Grid.Row="0" x:Name="btnImage" Margin="0" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"
+      <control:ImageButton x:Name="btnImage" Margin="0" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"
                            CurrentImage="/Image/liveview_channelinfo_show_normal.png"
                            UnCheckedImage="/Image/liveview_channelinfo_show_normal.png"
                            UnCheckedHoverImage="/Image/liveview_channelinfo_show_hover.png"
@@ -23,8 +23,8 @@
                            DisabledImage="/Image/liveview_channelinfo_show_disabled.png"
                            Click="ImageButton_Click"
                            IsChecked="False"/>
-      </Grid>
-      <Button Grid.Row="1" x:Name="btnTest" Content="Test" VerticalAlignment="Center" HorizontalAlignment="Center"
-              Click="btnTest_Click"/>
+    </Grid>
+    <Button Grid.Row="1" x:Name="btnTest" Content="Test" VerticalAlignment="Center" HorizontalAlignment="Center"
+      Click="btnTest_Click"/>
   </Grid>
 </Window>
