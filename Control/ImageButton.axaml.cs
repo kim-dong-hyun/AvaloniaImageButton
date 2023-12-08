@@ -33,8 +33,8 @@ public class ImageButton : Button
 
     public IImage CurrentImage
     {
-        get { return GetValue(CurrentImageProperty); }
-        set { SetValue(CurrentImageProperty, value); }
+        get => GetValue(CurrentImageProperty);
+        set => SetValue(CurrentImageProperty, value);
     }
 
     public IImage UnCheckedImage
@@ -130,6 +130,7 @@ public class ImageButton : Button
             }
 
             isDisabled = value;
+            IsEnabled = !value;
         }
     }
 
