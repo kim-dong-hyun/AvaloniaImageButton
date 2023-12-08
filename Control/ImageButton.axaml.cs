@@ -69,8 +69,8 @@ public class ImageButton : Button
 
     public IImage CheckedPressedImage
     {
-        get => GetValue(UnCheckedPressedImageProperty);
-        set => SetValue(UnCheckedPressedImageProperty, value);
+        get => GetValue(CheckedPressedImageProperty);
+        set => SetValue(CheckedPressedImageProperty, value);
     }
 
     public IImage DisabledImage
