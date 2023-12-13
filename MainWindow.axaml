@@ -6,6 +6,15 @@
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
         x:Class="AvaloniaImageButton.MainWindow"
         Title="AvaloniaImageButton" Width="400" Height="300">
+  <Window.Resources>
+    <Bitmap x:Key="imageShowNormal">/Image/liveview_channelinfo_show_normal.png</Bitmap>
+    <Bitmap x:Key="imageShowHover">/Image/liveview_channelinfo_show_hover.png</Bitmap>
+    <Bitmap x:Key="imageShowPressed">/Image/liveview_channelinfo_show_select.png</Bitmap>
+    <Bitmap x:Key="imageHideNormal">/Image/liveview_channelinfo_hide_normal.png</Bitmap>
+    <Bitmap x:Key="imageHideHover">/Image/liveview_channelinfo_hide_hover.png</Bitmap>
+    <Bitmap x:Key="imageHidePressed">/Image/liveview_channelinfo_hide_select.png</Bitmap>
+    <Bitmap x:Key="imageShowDisabled">/Image/liveview_channelinfo_show_disabled.png</Bitmap>
+  </Window.Resources>
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="*"/>
@@ -13,18 +22,20 @@
     </Grid.RowDefinitions>
     <Grid Grid.Row="0" Background="#333333">
       <control:ImageButton x:Name="btnImage" Margin="0" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"
-                           CurrentImage="/Image/liveview_channelinfo_show_normal.png"
-                           UnCheckedImage="/Image/liveview_channelinfo_show_normal.png"
-                           UnCheckedHoverImage="/Image/liveview_channelinfo_show_hover.png"
-                           UnCheckedPressedImage="/Image/liveview_channelinfo_show_select.png"
-                           CheckedImage="/Image/liveview_channelinfo_hide_normal.png"
-                           CheckedHoverImage="/Image/liveview_channelinfo_hide_hover.png"
-                           CheckedPressedImage="/Image/liveview_channelinfo_hide_select.png"
-                           DisabledImage="/Image/liveview_channelinfo_show_disabled.png"
+                           CurrentImage="{DynamicResource imageShowNormal}"
+                           UnCheckedImage="{DynamicResource imageShowNormal}"
+                           UnCheckedHoverImage="{DynamicResource imageShowHover}"
+                           UnCheckedPressedImage="{DynamicResource imageShowPressed}"
+                           CheckedImage="{DynamicResource imageHideNormal}"
+                           CheckedHoverImage="{DynamicResource imageHideHover}"
+                           CheckedPressedImage="{DynamicResource imageHidePressed}"
+                           DisabledImage="{DynamicResource imageShowDisabled}"
                            Click="ImageButton_Click"
                            IsChecked="False"/>
     </Grid>
-    <Button Grid.Row="1" x:Name="btnTest" Content="Test" VerticalAlignment="Center" HorizontalAlignment="Center"
-      Click="btnTest_Click"/>
+    <Button Grid.Row="1" x:Name="btnTest" Content="Test" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"
+            Click="btnTest_Click"/>
+    <Button Grid.Row="1" x:Name="btnTest2" Content="Test2" Margin="60,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"
+            Click="btnTest2_Click"/>
   </Grid>
 </Window>

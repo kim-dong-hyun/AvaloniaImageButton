@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media;
 
 namespace AvaloniaImageButton
 {
@@ -15,9 +16,19 @@ namespace AvaloniaImageButton
             btnImage.IsChecked = !btnImage.IsChecked;
         }
 
-        private void btnTest_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void btnTest_Click(object? sender, RoutedEventArgs e)
         {
             btnImage.IsDisabled = !btnImage.IsDisabled;
+        }
+
+        private void btnTest2_Click(object? sender, RoutedEventArgs e)
+        {
+            object? resource;
+            if (TryGetResource("imageShowDisabled", this.ActualThemeVariant, out resource))
+            {
+                btnImage.CurrentImage = (IImage)resource;
+                //btnImage.UnCheckedImage = (IImage)resource;
+            }
         }
     }
 }
